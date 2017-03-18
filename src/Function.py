@@ -1,3 +1,4 @@
+import networkx as nx
 
 
 class FunctionCFG:
@@ -14,9 +15,29 @@ class FunctionCFG:
 			sentences = list()
 			for insn in capBlock.insns:
 				ins = insn.insn
-				sentences.append(Sentence(ins.addr,ins.mnemonic,ins.op_str))
+				sentences.append(Sentence(ins.address,ins.mnemonic,ins.op_str))
 			sentences = filter(lambda sentence:sentence.pattern!=None, sentences)
-			self.blockDisassembly[block.addr]=sentences		
+			self.blockDisassembly[block.addr]=sentences
+
+
+
+#-------------------------------------------------------------------------------------
+#funcS	:FunctionCFG instance of a Test 'S'ample
+#funcM	:FunctionCFG instance of a 'M'alware 
+#functionComparator checks if a Sample FunctionCFG matches(subgraph isomorphically) a Malware FunctionCFG
+def functionComparator(funcS,funcM):
+	graph_matcher = nx.isomorphism.DiGraphMatcher(funcS.graph,funcM.graph)
+	if(graph_matcher.subgraph_is_isomorphic()):
+		for blockS,blockM in graph_matcher.mapping.items():
+			for sentenceS,sentenceM in zip(funcS.blockDisassembly[blockS.addr],funcM.blockDisassembly[blockM.addr]):
+				if sentenceS.pattern != sentenceM.pattern:
+					return False
+		return True
+
+	else:
+		return False
+#-------------------------------------------------------------------------------------
+
 
 
 
@@ -917,10 +938,7 @@ class Sentence:
 		self.addr = addr
 		self.op = mnemonic
 		self.operands = operands.split(',')
-		self.convertToMAIL()
-
-	def convertToMAIL(self):
-
+		Sentence.action[self.op](self)     #assigns a MAIL pattern to self statement
 
 	def patternHALT(self):
 		self.pattern = "HALT"
