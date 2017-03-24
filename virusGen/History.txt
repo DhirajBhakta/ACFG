@@ -1,0 +1,136 @@
+
+ [ Version History ]
+ 
+ At the moment i try to release a newer version every week.
+ Ok, the kernel and API Search are pretty random I guess, next
+ will be to power up the encrypting/decrypting part.
+
+ Until now, all versions are BETA !!! Keep this in mind please :)
+
+
+ *Version 0.30 - 29-06-2001
+  Hrhr, seems as if Mr. Kasperky wants to play, he added
+  the Constructor.Win32.NGVCK to the virus database, but
+  he just detects the Kit, not the generated viruses, the
+  heuristic still just shows a suspicion... Eugene, I am
+  very very disappointed ! I expected more from you and your
+  team, we both know that this kit will generate much stronger
+  viruses soon ( a month or two ) until then you should detect
+  'em all, I know you are able to do this. Mail me for questions .. ;)
+  If you detect them all until VB2001, you'll get a sixpack
+  of beer from me
+
+  Included a slightly different Kernel Search Method
+  and made other stuff more different. Mostly the API Search
+  and the kernel search.
+
+ *Version 0.29 - 22-06-2001
+  Included CRC32 Api Search as seen in Billy Belecebs
+  Windows Virus Writing Guide.
+
+ *Version 0.28 - 15-06-2001
+  Added a simple CRC Api Search, and will expand this
+  to an additional CRC32 Api Search Method to make the virus
+  more variable in structure ( and opcode of course )
+
+ *Version 0.27 - 01-06-2001
+  More (stupid) bugs fixed, caused by more variability i added
+  last thursday.. maybe i should never add something the last day
+  before the release =)
+  I also added a slightly different api search routine, which does
+  not compute the length of the names during searching, but has fixed
+  values.
+  In addition to this i also prepared the addition of crc based api
+  searching.
+ 
+ *Version 0.26 - 27-05-2001
+   3 in the Api Find
+   2 in the Find Files   
+ 
+   ...all in all 40 viruses created and tested, and just
+   5 bugs found ( and corrected.. seems good =)
+
+ *Version 0.25 - 18-05-2001
+   Removed the SEH part and put Antidebugging and Anti Bait together
+   Fixed 2 bugs in the find files routine
+   Fixed a bug inside the encryption routine
+   And got another on inside the infection routine.
+   ... two inside the Api Find Routine
+
+   Slowly i got the impression, someone is sneeking every night into
+   my room and adding newer bugs :P
+
+
+ *Version 0.24 - 11-05-2001
+   I found a lot this time, don't know wheter it is good, because i found
+   the bugs, or bad, because this means all releases before just suck.. :P
+
+   Fixed 3 bugs in the find files routines, 2 bugs in the encryption routines,
+   2 bugs in the api search routine. And one bug each in the api found,
+   anti soft ice check and anti bait check routines.
+   Never give me asm code in the night and ask me to debug it please =)
+
+ *Version 0.23 - 07-05-2001
+   Fixed a bug in the Delta Handle routine
+   Fixed a bug in the movRegisterValue routine
+   Fixed malplaced comments
+
+ *Version 0.22 MTX#3 Release - 19-02-2001
+   Just minor changes, I got no time at the moment :(
+   University means lots of work...
+
+ *Version 0.21 - 31-01-2001
+   Removed some really stupid bugs from the encryption routine
+   and made it more variable. I also added an SEH anti debugging
+   trick and included some trash code to make it more variable.
+
+ *Version 0.20 - 16-01-2001
+   I added encryption ( even if it is not completely random ), but
+   just simple algorithms, nothing with a key, but XOR and SUB/ADD
+   will follow soon =) Hope I can do this till friday, so I can give out
+   a first beta to some ppl. Every opcode except the ones in the crypt
+   routines are random, so no simple scanstring can be choosen. But the
+   ones inside the crypt routine will be made variable too.
+ 
+ *Version 0.14 - 08-01-2001
+   Ok, there are round about 99% of the opcodes random
+   ( they can be replaced by another ), the few others are either
+   "ret"s ( which i will replace tomorrow ) or an instruction, with 
+   at least one random parameter ( register / offset / constant ),
+   so there are maybe 20 Bytes static, but these are always at a 
+   different place and in a different order, so I think they will 
+   not make a reliable scanstring... ;)
+   But I will remove them too... But first I want to add some
+   other viral tricks ( anti-debugging, anti-bait, encryption )
+   which the user might select to include. ( This will also change
+   the behavior of the viruses )
+
+ *Version 0.13 - 25-12-2000
+   Ok, now 3/4 are completely random, will continue with the rest...
+
+ *Version 0.12 - 18-12-2000
+   The output is now ok, and understandable ;) I added a lot of comments
+   and formatted them. Got not much time at the moment to work on the
+   engine itself, because I still got to find some x-mas presents and
+   i got more work at university. So I just worked over 1/4 of the current engine
+   to make it more variable, but till now, I found at least one replacement for
+   every opcode and structure inside the 3 modules.
+
+ *Version 0.10 - 13-13-2000
+   The Kit works stable ! All generated Viruses work, infect the current and
+   ( if choosen ) the windows and system directory. I will now read some poly
+   tutors and papers to improve the randomness of it, and made some improvements
+   of the really crappy output-design ;)
+
+ *Version 0.02 - 11-12-2000
+   Most generated viruses work ! ( so I hope I can finish this basis of the kit this week ) 
+   I found out that the Digital Hackers' Alliance Randomized Encryption Generator [DREG]
+   which was created by Gothmog/DHA also tried to create viruses this way. Due to the
+   fact that all samples from him get detected, I'll try to give my best to avoid this ;)
+   I will take a look at his VCK and hope to learn from his output.
+   ( heh, Gothmog, if you are still around, give me a call.. :P )
+
+ *Version 0.00 - 20-11-2000
+   Generates simple Win32 Viruses
+   NOP is the only trash instruction
+   lot's of bugs ;(

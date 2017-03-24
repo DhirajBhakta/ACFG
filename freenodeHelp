@@ -1,0 +1,12 @@
+<r2tg> <Deroad> use dotx?
+<r2tg> <jeisonwi> Can you please provide a testcase
+<r2tg> <Deroad> *xdot
+<r2tg> <Deroad> or more simply
+* B41lH4ckGalR3 has quit (Ping timeout: 240 seconds)
+<r2tg> <Deroad> convert -size 5000x5000 file.dot file.png
+<r2tg> <Deroad> ?
+<r2tg> <pancake> the_last_uchiha graphviz is slow
+<r2tg> <pancake> export to gml from dot
+<r2tg> <pancake> and use any other tool like yFiles
+<r2tg> <pancake> that will load and process it fast
+<r2tg> <pancake> there's no opensrc alternative

@@ -1,0 +1,15 @@
+QUICK REFERENCE CARD FOR PHALCON/SKISM'S Gý VIRUS GENERATOR
+----- --------- ---- --- --------------- -- ----- ---------
+Welcome to Gý, the most modern virus creation tool to date.
+
+Step 1: Make sure the latest G2.DAT file is in the current directory.
+Step 2: Edit the G2.CFG file to accomodate your parameters.
+Step 3: Run Gý with the following syntax:
+          G2 [<datafile>] <configfile1> [<configfile2> ...]
+               [optional] <replace with appropriate filename>
+Step 4: Examine the output, learn, assemble (the directions are in the
+        output file).
+
+If you still have trouble getting Gý to work, they you're probably one
+of those knobs that use Windows.
+

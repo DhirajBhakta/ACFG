@@ -1,0 +1,27 @@
+digraph code {
+	graph [bgcolor=white fontsize=8 fontname="Courier"];
+	node [fillcolor=gray style=filled shape=box];
+	edge [arrowhead="vee"];
+	"0x0040144c" -> "0x0040146d" [color="green"];
+	"0x0040144c" -> "0x0040145a" [color="red"];
+	"0x0040144c" [URL="sub.KERNEL32.DLL_HeapAlloc_44c/0x0040144c", fillcolor="lightgray", color="black", label="/ (fcn) sub.KERNEL32.DLL_HeapAlloc_44c 70\l|   sub.KERNEL32.DLL_HeapAlloc_44c ();\l| 0x0040144c      cmp dword [0x408ae0], 3\l| 0x00401453      push esi\l| 0x00401454      mov esi, dword [esp + 8]\l| 0x00401458      jne 0x40146d\l"]
+	"0x0040145a" -> "0x0040146d" [color="green"];
+	"0x0040145a" -> "0x00401462" [color="red"];
+	"0x0040145a" [URL="sub.KERNEL32.DLL_HeapAlloc_44c/0x0040145a", fillcolor="lightgray", color="black", label="| 0x0040145a      cmp esi, dword [0x408acc]\l| 0x00401460      ja 0x40146d\l"]
+	"0x00401462" -> "0x00401490" [color="green"];
+	"0x00401462" -> "0x0040146d" [color="red"];
+	"0x00401462" [URL="sub.KERNEL32.DLL_HeapAlloc_44c/0x00401462", fillcolor="lightgray", color="black", label="| 0x00401462      push esi\l| 0x00401463      call fcn.004032b4\l| 0x00401468      test eax, eax\l| 0x0040146a      pop ecx\l| 0x0040146b      jne 0x401490\l"]
+	"0x0040146d" -> "0x00401472" [color="green"];
+	"0x0040146d" -> "0x00401471" [color="red"];
+	"0x0040146d" [URL="sub.KERNEL32.DLL_HeapAlloc_44c/0x0040146d", fillcolor="lightgray", color="black", label="| 0x0040146d      test esi, esi\l| 0x0040146f      jne 0x401472\l"]
+	"0x00401471" -> "0x00401472" [color="blue"];
+	"0x00401471" [URL="sub.KERNEL32.DLL_HeapAlloc_44c/0x00401471", fillcolor="lightgray", color="black", label="| 0x00401471      inc esi\l"]
+	"0x00401472" -> "0x00401481" [color="green"];
+	"0x00401472" -> "0x0040147b" [color="red"];
+	"0x00401472" [URL="sub.KERNEL32.DLL_HeapAlloc_44c/0x00401472", fillcolor="lightgray", color="black", label="| 0x00401472      cmp dword [0x408ae0], 1\l| 0x00401479      je 0x401481\l"]
+	"0x0040147b" -> "0x00401481" [color="blue"];
+	"0x0040147b" [URL="sub.KERNEL32.DLL_HeapAlloc_44c/0x0040147b", fillcolor="lightgray", color="black", label="| 0x0040147b      add esi, 0xf\l| 0x0040147e      and esi, 0xfffffff0\l"]
+	"0x00401481" -> "0x00401490" [color="blue"];
+	"0x00401481" [URL="sub.KERNEL32.DLL_HeapAlloc_44c/0x00401481", fillcolor="lightgray", color="black", label="| 0x00401481      push esi\l| 0x00401482      push 0\l| 0x00401484      push dword [0x408adc]\l| 0x0040148a      call dword [sym.imp.KERNEL32.DLL_HeapAlloc]\l"]
+	"0x00401490" [URL="sub.KERNEL32.DLL_HeapAlloc_44c/0x00401490", fillcolor="lightgray", color="black", label="| 0x00401490      pop esi\l\\ 0x00401491      ret\l"]
+}

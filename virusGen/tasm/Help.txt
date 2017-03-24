@@ -1,0 +1,129 @@
+MOV
+Copy Byte or Word from specified source to specified destination.
+MOV destination,source
+AAA
+ASCII Adjust for Addition
+AAA
+AAD
+BCD to Binary Convert before division.
+AAD
+AAM
+BCD adjust after multiplication
+AAM
+AAS
+ASCII Adjust for Substration
+AAS
+ADC
+Add with Carry
+ADC destination,source
+ADD
+Add specified Byte to Byte or Specified Word to Word
+ADD destination,source
+AND
+AND Corrosponding bits of two bit operand
+AND destination,source
+BOUND
+Check if effective address within specified array bounds (Used in 80186/80188 Only)
+BOUND BX,BOUND_STORE
+CALL
+Call a Procedure
+CALL procedure
+CBW
+Convert Signed Byte to Word
+CBW
+CLC
+Clear the Carry Flag
+CLC
+CLD
+Clear Direction Flag
+CLD
+CLI
+Clear Intrrupt Flag
+CLI
+CMC
+Complement the Carry Flag
+CMC
+CMP
+Compare Byte or Word
+CMP destination,source
+CMPS
+Compare String Bytes or String Word
+CMPS firststring,secondstring
+CMPSB
+Compare Bytes
+CMPSB firstbyte,secondbyte
+CMPSW
+Compare Word
+CMPSW firstword,secondword
+CWD
+Convert Signed word to Signed double word.
+CWD
+DAA
+Decimal Adjust Accumulator
+DAA
+DAS
+Decimal Adjust after Substraction
+DAS
+DEC
+Decrement destination register or memory
+DEC destination
+DIV
+Unsigned Divide.
+DIV source
+ESC
+Escape
+ESC
+HLT
+Halt Processing
+HLT
+IDIV
+Divide by signed byte or word
+IDIV source
+IMUL
+Multiply signed number
+IMUL source
+IN
+Copy data from port to accumulator
+IN accumulator,port
+INC
+Adds one to destination
+INC destination
+INT
+Interrupt program execution
+INT type
+INTO
+Interrupt on overflow
+INTO
+JA
+Jump if above
+JA label
+JNBE
+Jump if not below
+JNBE label
+JAE
+Jump if above or Equal
+JAE label
+JNB
+Jump if not below
+JNB label
+JNC
+Jump if no carry
+JNC label
+JB
+Jump if below
+JB label
+JC
+Jump if carry
+JC label
+JNAE
+Jump if not above nor equal
+JNAE label
+JBE
+Jump if below or equal
+JBE label
+JNA
+Jump if not above
+JNA label
+JCXZ
+Jump if CX register is zero
+JCXZ label

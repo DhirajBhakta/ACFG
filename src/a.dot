@@ -1,0 +1,6 @@
+digraph code {
+	graph [bgcolor=white fontsize=8 fontname="Courier"];
+	node [fillcolor=gray style=filled shape=box];
+	edge [arrowhead="vee"];
+	"0x0805d284" [URL="sym._fini/0x0805d284", fillcolor="lightgray", color="black", label="  ;-- section_end..text:\l  ;-- section..fini:\l/ (fcn) sym._fini 23\l|   sym._fini ();\l| 0x0805d284      push ebp\l| 0x0805d285      mov ebp, esp\l| 0x0805d287      push ebx\l| 0x0805d288      call sym.__get_pc_thunk_bx\l| 0x0805d28d      add ebx, 0x37ef\l| 0x0805d293      call sym.__do_global_dtors_aux\l| 0x0805d298      pop ebx\l| 0x0805d299      pop ebp\l\\ 0x0805d29a      ret\l"]
+}

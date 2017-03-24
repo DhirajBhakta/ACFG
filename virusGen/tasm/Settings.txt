@@ -1,0 +1,2 @@
+D:\Projects\RUNNIN~1\TASMED~1\TASM\tasm.exe
+D:\Projects\RUNNIN~1\TASMED~1\TASM\tlink.exe

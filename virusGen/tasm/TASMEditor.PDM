@@ -1,0 +1,98 @@
+[Root]
+Most Recent Package=Standard Setup Package 1
+
+
+[Package|Standard Setup Package 1|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=D:\Projects\Running Projects\TASMEditor\Package
+
+[Package|Standard Setup Package 1|Configure DAO ISAMs]
+Applicable=No
+
+[Package|Standard Setup Package 1|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|Standard Setup Package 1|Files Found]
+
+[Package|Standard Setup Package 1|Files Released]
+
+[Package|Standard Setup Package 1|Missing Dependency Information]
+
+[Package|Standard Setup Package 1|Out-of-Date Dependency Information]
+E:\WINDOWS\system32\mscomctl.ocx=
+E:\WINDOWS\system32\comdlg32.ocx=
+
+[Package|Standard Setup Package 1|Files Added]
+
+[Package|Standard Setup Package 1|Files Removed]
+
+[Package|Standard Setup Package 1|Files In Project]
+D:\Projects\Running Projects\TASMEditor\TASMEditor.exe=Yes
+E:\WINDOWS\system32\msvbvm60.dll=Yes
+E:\WINDOWS\system32\oleaut32.dll=Yes
+E:\WINDOWS\system32\olepro32.dll=Yes
+E:\WINDOWS\system32\asycfilt.dll=Yes
+E:\WINDOWS\system32\stdole2.tlb=Yes
+E:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+E:\WINDOWS\system32\comdlg32.ocx=Yes
+E:\WINDOWS\system32\mscomctl.ocx=Yes
+E:\WINDOWS\system32\RICHTX32.OCX=Yes
+E:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\RICHED32.DLL=Yes
+E:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+E:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+E:\WINDOWS\system32\VB6STKIT.DLL=Yes
+E:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+
+[Package|Standard Setup Package 1|Configure Registry Files]
+Applicable=No
+
+[Package|Standard Setup Package 1|Configure Remote Servers]
+Applicable=No
+
+[Package|Standard Setup Package 1|Install Locations]
+D:\Projects\Running Projects\TASMEditor\TASMEditor.exe=$(AppPath)
+E:\WINDOWS\system32\msvbvm60.dll=$(WinSysPathSysFile)
+E:\WINDOWS\system32\oleaut32.dll=$(WinSysPathSysFile)
+E:\WINDOWS\system32\olepro32.dll=$(WinSysPathSysFile)
+E:\WINDOWS\system32\asycfilt.dll=$(WinSysPathSysFile)
+E:\WINDOWS\system32\stdole2.tlb=$(WinSysPathSysFile)
+E:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+E:\WINDOWS\system32\comdlg32.ocx=$(WinSysPath)
+E:\WINDOWS\system32\mscomctl.ocx=$(WinSysPath)
+E:\WINDOWS\system32\RICHTX32.OCX=$(WinSysPath)
+E:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\RICHED32.DLL=$(WinSysPathSysFile)
+E:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+E:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+E:\WINDOWS\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
+E:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+
+[Package|Standard Setup Package 1|Configure Shared Files]
+Applicable=Yes
+D:\Projects\Running Projects\TASMEditor\TASMEditor.exe=No
+
+[Package|Standard Setup Package 1|Distribution]
+Type=single
+Size=
+Title=TASMEditor
+
+[Package|Standard Setup Package 1|IconGroups]
+Group0=TASMEditor
+PrivateGroup0=True
+Parent0=$(Programs)
+
+[Package|Standard Setup Package 1|TASMEditor]
+Icon1=TASMEditor.exe
+Title1=TASMEditor
+StartIn1=$(AppPath)
+Key1=Icon1
+
+[Package|Standard Setup Package 1|Package]
+PackageFolder=D:\Projects\Running Projects\TASMEditor\Package
+ProjectFolder=D:\Projects\Running Projects\TASMEditor
+ServerSideCab=
+File1=D:\Projects\Running Projects\TASMEditor\Package\setup.exe
+File2=D:\Projects\Running Projects\TASMEditor\Package\Setup.Lst
+File3=D:\Projects\Running Projects\TASMEditor\Package\TASMEditor.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz
