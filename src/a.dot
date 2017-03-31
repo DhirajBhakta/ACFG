@@ -2,5 +2,49 @@ digraph code {
 	graph [bgcolor=white fontsize=8 fontname="Courier"];
 	node [fillcolor=gray style=filled shape=box];
 	edge [arrowhead="vee"];
-	"0x0805d284" [URL="sym._fini/0x0805d284", fillcolor="lightgray", color="black", label="  ;-- section_end..text:\l  ;-- section..fini:\l/ (fcn) sym._fini 23\l|   sym._fini ();\l| 0x0805d284      push ebp\l| 0x0805d285      mov ebp, esp\l| 0x0805d287      push ebx\l| 0x0805d288      call sym.__get_pc_thunk_bx\l| 0x0805d28d      add ebx, 0x37ef\l| 0x0805d293      call sym.__do_global_dtors_aux\l| 0x0805d298      pop ebx\l| 0x0805d299      pop ebp\l\\ 0x0805d29a      ret\l"]
+	"0x00405020" -> "0x004050f0" [color="green"];
+	"0x00405020" -> "0x0040503c" [color="red"];
+	"0x00405020" [URL="fcn.00405020/0x00405020", fillcolor="lightgray", color="black", label="/ (fcn) fcn.00405020 236\l|   fcn.00405020 ();\l| ; var int local_0h @ rbp-0x0\l| 0x00405020      push r15\l| 0x00405022      push r14\l| 0x00405024      push r13\l| 0x00405026      push r12\l| 0x00405028      push rbp\l| 0x00405029      push rbx\l| 0x0040502a      sub rsp, 0x18\l| 0x0040502e      test rdi, rdi\l| 0x00405031      mov qword [rsp + 8], rdx\l| 0x00405036      je 0x4050f0\l"]
+	"0x0040503c" -> "0x004050f0" [color="green"];
+	"0x0040503c" -> "0x00405047" [color="red"];
+	"0x0040503c" [URL="fcn.00405020/0x0040503c", fillcolor="lightgray", color="black", label="| 0x0040503c      movzx edx, byte [rdi]\l| 0x0040503f      test dl, dl\l| 0x00405041      je 0x4050f0\l"]
+	"0x00405047" -> "0x004050f0" [color="green"];
+	"0x00405047" -> "0x00405053" [color="red"];
+	"0x00405047" [URL="fcn.00405020/0x00405047", fillcolor="lightgray", color="black", label="| 0x00405047      test rsi, rsi\l| 0x0040504a      mov r14, rsi\l| 0x0040504d      je 0x4050f0\l"]
+	"0x00405053" -> "0x004050f0" [color="green"];
+	"0x00405053" -> "0x0040505f" [color="red"];
+	"0x00405053" [URL="fcn.00405020/0x00405053", fillcolor="lightgray", color="black", label="| 0x00405053      cmp qword [rsp + 8], 0\l| 0x00405059      je 0x4050f0\l"]
+	"0x0040505f" -> "0x004050f0" [color="green"];
+	"0x0040505f" -> "0x0040506b" [color="red"];
+	"0x0040505f" [URL="fcn.00405020/0x0040505f", fillcolor="lightgray", color="black", label="| 0x0040505f      test rcx, rcx\l| 0x00405062      mov r13, rcx\l| 0x00405065      je 0x4050f0\l"]
+	"0x0040506b" -> "0x0040508e" [color="blue"];
+	"0x0040506b" [URL="fcn.00405020/0x0040506b", fillcolor="lightgray", color="black", label="| 0x0040506b      mov rbx, rdi\l| 0x0040506e      xor r15d, r15d\l| 0x00405071      xor r12d, r12d\l| 0x00405074      jmp 0x40508e\l"]
+	"0x00405080" -> "0x004050dc" [color="green"];
+	"0x00405080" -> "0x00405087" [color="red"];
+	"0x00405080" [URL="fcn.00405020/0x00405080", fillcolor="lightgray", color="black", label="| 0x00405080      movzx edx, byte [rbx]\l| 0x00405083      test dl, dl\l| 0x00405085      je 0x4050dc\l"]
+	"0x00405087" -> "0x0040508e" [color="blue"];
+	"0x00405087" [URL="fcn.00405020/0x00405087", fillcolor="lightgray", color="black", label="| 0x00405087      test rdi, rdi\l| 0x0040508a      cmove rdi, rbx\l"]
+	"0x0040508e" -> "0x004050d6" [color="green"];
+	"0x0040508e" -> "0x004050a9" [color="red"];
+	"0x0040508e" [URL="fcn.00405020/0x0040508e", fillcolor="lightgray", color="black", label="| 0x0040508e      cmp dl, 0x2c\l| 0x00405091      mov rbp, r12\l| 0x00405094      lea rdx, [rbx + 1]\l| 0x00405098      cmove rbp, rbx\l| 0x0040509c      cmp byte [rbx + 1], 0\l| 0x004050a0      cmove rbp, rdx\l| 0x004050a4      test rbp, rbp\l| 0x004050a7      je 0x4050d6\l"]
+	"0x004050a9" -> "0x004050f0" [color="green"];
+	"0x004050a9" -> "0x004050ae" [color="red"];
+	"0x004050a9" [URL="fcn.00405020/0x004050a9", fillcolor="lightgray", color="black", label="| 0x004050a9      cmp rdi, rbp\l| 0x004050ac      jae 0x4050f0\l"]
+	"0x004050ae" -> "0x004050f0" [color="green"];
+	"0x004050ae" -> "0x004050bc" [color="red"];
+	"0x004050ae" [URL="fcn.00405020/0x004050ae", fillcolor="lightgray", color="black", label="| 0x004050ae      mov rsi, rbp\l| 0x004050b1      sub rsi, rdi\l| 0x004050b4      call r13\l| 0x004050b7      cmp eax, -1\l| 0x004050ba      je 0x4050f0\l"]
+	"0x004050bc" -> "0x00405104" [color="green"];
+	"0x004050bc" -> "0x004050cb" [color="red"];
+	"0x004050bc" [URL="fcn.00405020/0x004050bc", fillcolor="lightgray", color="black", label="| 0x004050bc      lea rdx, [r15 + 1]\l| 0x004050c0      cmp qword [rsp + 8], rdx\l| 0x004050c5      mov dword [r14 + r15*4], eax\l| 0x004050c9      jbe 0x405104\l"]
+	"0x004050cb" -> "0x004050dc" [color="green"];
+	"0x004050cb" -> "0x004050d4" [color="red"];
+	"0x004050cb" [URL="fcn.00405020/0x004050cb", fillcolor="lightgray", color="black", label="| 0x004050cb      cmp byte [rbp], 0\l| 0x004050cf      mov r15, rdx\l| 0x004050d2      je 0x4050dc\l"]
+	"0x004050d4" -> "0x004050d6" [color="blue"];
+	"0x004050d4" [URL="fcn.00405020/0x004050d4", fillcolor="lightgray", color="black", label="| 0x004050d4      xor edi, edi\l"]
+	"0x004050d6" -> "0x00405080" [color="green"];
+	"0x004050d6" -> "0x004050dc" [color="red"];
+	"0x004050d6" [URL="fcn.00405020/0x004050d6", fillcolor="lightgray", color="black", label="| 0x004050d6      add rbx, 1\l| 0x004050da      jne 0x405080\l"]
+	"0x004050dc" [URL="fcn.00405020/0x004050dc", fillcolor="lightgray", color="black", label="| 0x004050dc      add rsp, 0x18\l| 0x004050e0      mov eax, r15d\l| 0x004050e3      pop rbx\l| 0x004050e4      pop rbp\l| 0x004050e5      pop r12\l| 0x004050e7      pop r13\l| 0x004050e9      pop r14\l| 0x004050eb      pop r15\l| 0x004050ed      ret\l"]
+	"0x004050f0" [URL="fcn.00405020/0x004050f0", fillcolor="lightgray", color="black", label="| 0x004050f0      add rsp, 0x18\l| 0x004050f4      mov eax, 0xffffffff\l| 0x004050f9      pop rbx\l| 0x004050fa      pop rbp\l| 0x004050fb      pop r12\l| 0x004050fd      pop r13\l| 0x004050ff      pop r14\l| 0x00405101      pop r15\l| 0x00405103      ret\l"]
+	"0x00405104" [URL="fcn.00405020/0x00405104", fillcolor="lightgray", color="black", label="| 0x00405104      add rsp, 0x18\l| 0x00405108      mov eax, 0xfffffffe\l| 0x0040510d      pop rbx\l| 0x0040510e      pop rbp\l| 0x0040510f      pop r12\l| 0x00405111      pop r13\l| 0x00405113      pop r14\l| 0x00405115      pop r15\l\\ 0x00405117      ret\l"]
 }

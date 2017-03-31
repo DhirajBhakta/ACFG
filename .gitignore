@@ -1,8 +1,12 @@
 /venv
+/virusGen
 /references
 /malwares
 /malwares2
+/malwares_old
+/sig_2
 /testsamples
+/testsamples2
 /radare2
 /references
 /signatures

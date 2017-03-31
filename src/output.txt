@@ -1,0 +1,12 @@
+
+--CHECKING WITH :SIG_VirusShare_4a0e5f3c3d70dc287202eb0e342ca632
+
+-- #functions   :25
+
+-- #functions in Sample:332
+
+--CHECKING WITH :SIG_VirusShare_4286ee45e9fcc2db3ddfad38426b7f50
+
+-- #functions   :139
+
+-- #functions in Sample:332

@@ -38,14 +38,9 @@ class FunctionCFG:
 			block_dismbl = map(FunctionCFG.getInsns, block_dismbl)
 			block_dismbl = filter(None,block_dismbl)
 			#block_dismbl = map(utf8,block_dismbl)
-			sentences = list()
-			
-					
-
-			
+			sentences = [Sentence(line) for line in block_dismbl]	
 			sentences = filter(lambda sentence:sentence.pattern!=None, sentences)
 			self.blockDisassembly[block_addr]=sentences
-
 
 
 #-------------------------------------------------------------------------------------
@@ -54,11 +49,20 @@ class FunctionCFG:
 #functionComparator checks if a Sample FunctionCFG matches(subgraph isomorphically) a Malware FunctionCFG
 def functionComparator(funcS,funcM):
 	graph_matcher = nx.isomorphism.DiGraphMatcher(funcS.graph,funcM.graph)
+	
 	if(graph_matcher.subgraph_is_isomorphic()):
+		
 		for blockS_addr,blockM_addr in graph_matcher.mapping.items():
+			if(len(funcM.blockDisassembly) != len(funcS.blockDisassembly)):
+				return False
+
+			print funcS.blockDisassembly[blockM_addr]
 			for sentenceS,sentenceM in zip(funcS.blockDisassembly[blockS_addr],funcM.blockDisassembly[blockM_addr]):
+				print "inside for loop"
+				print sentenceM.pattern +" equals "+ sentenceS.pattern
 				if sentenceS.pattern != sentenceM.pattern:
 					return False
+				print sentenceM.pattern +" equals "+ sentenceS.pattern
 		return True
 
 	else:
@@ -89,4 +93,4 @@ class Sentence:
 			self.pattern = "UNKNOWN"
 	
 	def __repr__(self):
-		return "%3s  :%15s %-10s" %(self.addr,self.op,self.operands)
+		return ":%15s %-10s" %(self.opcode,self.operands)
